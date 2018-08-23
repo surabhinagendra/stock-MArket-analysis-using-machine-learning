@@ -1,0 +1,70 @@
+mysql -u root -p
+
+create database company_details;
+use company_details;
+
+create table company(
+companyid int auto_increment,
+companyname varchar(40),
+companyfname varchar(30),
+category varchar(30),
+primary key(companyid));
+
+create table dependants(
+cid int,
+did int,
+primary key(cid,did),
+foreign key(cid) references company(companyid),
+foreign key(did) references company(companyid));
+
+
+insert into company(companyname,companyfname,category) values('wipro','wipro.csv','company');
+insert into company(companyname,companyfname,category) values('infosys','infy.csv','company');
+insert into company(companyname,companyfname,category) values('reliance','reliance.csv','company');
+insert into company(companyname,companyfname,category) values('reliance communications','rcom.csv','company');
+insert into company(companyname,companyfname,category) values('tata motors','tatamotors.csv','company');
+insert into company(companyname,companyfname,category) values('mahindra and mahindra','m&mf.csv','company');
+insert into company(companyname,companyfname,category) values('rolta','rolta.csv','company');
+insert into company(companyname,companyfname,category) values('ICICI','icici.csv','company');
+insert into company(companyname,companyfname,category) values('SBI','sbi.csv','company');
+insert into company(companyname,companyfname,category) values('ONGC','ongc.csv','company');
+insert into company(companyname,companyfname,category) values('BPCL','bpcl.csv','company');
+insert into company(companyname,companyfname,category) values('hindustan petroleum','hindpetrol.csv','company');
+insert into company(companyname,companyfname,category) values('SENSEX','sensex.csv','stock index');
+insert into company(companyname,companyfname,category) values('NIFTY','nifty.csv','stock index');
+insert into company(companyname,companyfname,category) values('NASDAQ','nasdaq.csv','stock index');
+insert into company(companyname,companyfname,category) values('EUR-INR','eur-inr.csv','currency');
+insert into company(companyname,companyfname,category) values('USD-INR','usd-inr.csv','currency');
+insert into company(companyname,companyfname,category) values('GOLD','gold.csv','commodities');
+insert into company(companyname,companyfname,category) values('SILVER','silver.csv','commodities')
+
+
+
+insert into dependant(cid,did) values(1,2)
+insert into dependant(cid,did) values(1,8)
+insert into dependant(cid,did) values(1,7)
+insert into dependant(cid,did) values(1,6)
+insert into dependant(cid,did) values(1,5)
+insert into dependant(cid,did) values(2,1)
+insert into dependant(cid,did) values(2,8)
+insert into dependant(cid,did) values(2,7)
+insert into dependant(cid,did) values(2,6)
+insert into dependant(cid,did) values(2,5)
+insert into dependant(cid,did) values(3,4)
+insert into dependant(cid,did) values(3,10)
+insert into dependant(cid,did) values(3,11)
+insert into dependant(cid,did) values(3,12)
+insert into dependant(cid,did) values(3,9)
+
+
+
+
+create database login_details;
+use login_details;
+create table login(
+login_id int auto_increment,
+username varchar(45),
+password varchar(15),
+email varchar(200)
+primary key(login_id)
+);
