@@ -5,7 +5,7 @@ from datetime import datetime
 import numpy as np
 
 def get_news(cname):
-	api_key = '9d450ce252524cdbaefed3691053ab78'
+	api_key = ' '
 	newsapi = NewsApiClient(api_key)
 	all_articles = newsapi.get_everything(q=cname or 'stock' or 'market' or'sensex' or 'nifty' or 'nasdaq'  or 'prices',sources=['the-times-of-india','google-news-in','the-hindu','cnbc'], from_parameter='2013-04-02',to='2018-04',language='en',sort_by='relevancy')
 	articles1=all_articles['articles']
