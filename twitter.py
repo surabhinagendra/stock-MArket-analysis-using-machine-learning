@@ -19,11 +19,11 @@ def generate_randomdate():
 
 
 def get_tweets(cname):
-	consumer_key = '1eDqlfHqNMQoQ6Dk0rtUJhXpQ'
-	consumer_secret = 'clUv425cloJaYjYam600ebFpbX6rZuNEvPYcYsDMNfgvFPd1LX'
+	consumer_key = ''
+	consumer_secret = ''
 
-	access_token = '981131259832254466-mudOCU0xJZwvb4RmgYugWLdWfnGtGba'
-	access_token_secret = 'h3Hlbhw2ZNPYoRhNZkR0uFGA8Oly6mNhO0KCtZEC0ECoR'
+	access_token = ''
+	access_token_secret = ''
 
 	auth=tweepy.OAuthHandler(consumer_key,consumer_secret)
 	auth.set_access_token(access_token,access_token_secret)
